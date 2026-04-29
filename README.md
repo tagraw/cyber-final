@@ -1,4 +1,4 @@
-# HandFly 🤙✈️
+# HandFly
 **Gesture-controlled Crazyflie via AIDeck + MediaPipe**
 
 ---
@@ -55,16 +55,11 @@ python run_mock.py
 | **Point Down** | Index finger pointing downward | Move down |
 | **Point Left** | Index finger pointing left | Move left |
 | **Point Right** | Index finger pointing right | Move right |
-| **Point Forward** | Index finger toward camera | Move forward |
-| **Point Back** | Index finger away from camera | Move backward |
 | **Closed Fist** | All fingers curled | Hold position |
 | **Open Palm** | All 5 fingers extended flat | Takeoff / Land toggle |
-| **Thumbs Up** | Thumb up, fist closed | Ascend |
-| **Thumbs Down** | Thumb down, fist closed | Descend |
-| **Peace / V** | Index + middle extended | Toggle SLOW ↔ FAST speed |
 | **Pinch** | Thumb tip touching index tip | Run square patrol route |
-| **Circular CW** | Move wrist in clockwise circle | 360° yaw spin clockwise |
-| **Circular CCW** | Move wrist counter-clockwise | 360° yaw spin counter-clockwise |
+| **Two Fingers UP** | Move wrist in clockwise circle | 360° yaw spin clockwise |
+| **Three Fingers Up ** | Move wrist counter-clockwise | 360° yaw spin counter-clockwise |
 
 ---
 
@@ -100,10 +95,3 @@ handfly/
 
 ---
 
-## Safety Notes
-
-- Always have a **manual override** (physical kill switch or human spotter) ready.
-- The `FIST` gesture immediately halts movement — practise it first.
-- `COMMAND_COOLDOWN` and `GESTURE_HOLD_FRAMES` prevent accidental triggers; increase them if the environment is noisy.
-- The controller enforces a **floor at z = 0.2 m** to prevent ground collisions.
-- Run in an open indoor space within the **lighthouse / flow deck tracking volume**.
